@@ -1,0 +1,241 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.home_area {
+	padding: 400px 0 350px;
+    background-color: #b0b0b0;
+    background-image: url('../images/pexels-pixabay-326279.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+	text-align: center;
+	color: white;
+}
+.main_area {
+	margin-top: -20px;
+	background-image: url('../images/background-image.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.home_area h1 {
+	font-weight: 700;
+	font-size: 66px;
+}
+#prefetch input{
+	height: 50px; 
+	width: 600px; 
+	margin-top:30px; 
+	margin-left: -50px
+}
+#prefetch input::placeholder {
+	font-size: 30px;
+}
+
+/*Main section css style*/
+.return_button a {
+	top:20px;
+	left:50px;
+	position: absolute;
+	color:black;
+	font-size: 18px;
+	font-weight: 500;
+	padding:10px 18px;
+	border-radius: 15px;
+	text-decoration: none;
+	background-color: orange;
+}
+.main_container{
+	margin: 20px auto;
+	max-width: 1500px;
+}
+.product_wrapper {
+	margin: 0 80px;
+    width: 100%;
+    overflow: hidden;
+}
+.product_gallery {
+	position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: flex-start;
+	align-items: center;
+}
+
+.product_content {
+	z-index: 1;
+	width: 100%;
+	margin: 20px;
+	position: relative;
+	max-width: 300px;
+    height: 600px;
+    padding: 0 0 10px;
+    border-radius: 35px;
+	backdrop-filter: blur(15px);
+	background-color: rgb(255,255,255,0.4);
+	box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+}
+.product_content:hover {
+	filter: drop-shadow(8px 8px 10px gray);
+	cursor: pointer;
+}
+
+.product_name h2{
+	font-size: 40px;
+	font-weight: 700;
+	padding: 15px 10px;
+	margin: 10px;
+}
+.product_image {
+	height: 10rem;
+	width: 100%;
+	margin: 0.1rem;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	background-size:cover;
+	background-repeat: no-repeat;
+    background-position: center center;  
+	
+}
+
+.product_detail {
+	width:50%;
+	margin: 10px 20px 10px 100px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+.product_info {
+	margin: 10px 10px 0 10px;
+	font-size:25px;
+	font-weight: 700;
+}
+.product_description {
+	padding:10px;
+	margin-top: 2px;
+}
+.product_description p {
+	margin: 0;
+	font-size: 20px;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	font-weight: 600;
+}
+.product_button {
+	padding: 10px;
+	font-size: 18px;
+	right:20px;
+	bottom: 20px;
+	position: absolute;
+	border-radius: 15px;
+	background-color: skyblue;
+}
+.product_button:hover{
+	color:red;
+	background-color: white;
+	opacity: 0.8;
+}
+
+/*desktop-large*/
+@media (min-width: 1200px) and (max-width: 1440px) {
+	.home_area h1 {
+		font-weight: 600;
+		font-size: 56px;
+	}
+	#prefetch input{
+		height: 45px; 
+		width: 500px;
+		margin-top:20px; 
+		margin-left: -50px
+		
+	}
+	#prefetch input::placeholder {
+		font-size: 25px;
+	}
+	.product_wrapper {
+		margin: 0 20px;
+	}
+}
+
+/*desktop*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+	.home_area h1 {
+		font-weight: 600;
+		font-size: 46px;
+	}
+	#prefetch input{
+		height: 40px; 
+		width: 400px;
+		margin-top:10px; 
+		margin-left: -50px 
+	}
+	#prefetch input::placeholder{
+		font-size: 22px;
+	}
+	.product_wrapper {
+		margin: 0 20px;
+	}
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.home_area h1 {
+		font-weight: 600;
+		font-size: 40px;
+	}
+	#prefetch input{
+		height: 30px; 
+		width: 300px; 
+		margin-top:8px; 
+		margin-left: -70px
+	}
+	#prefetch input::placeholder{
+		font-size: 20px;
+	}
+	.product_wrapper {
+		margin: 0 20px;
+	}
+}
+
+/*landscape-phone*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.home_area h1 {
+		font-weight: 600;
+		font-size: 36px;
+	}
+	#prefetch input{
+		height: 25px; 
+		width: 250px;
+		margin-top:5px; 
+		margin-left: -70px 
+	}
+	#prefetch input::placeholder{
+		font-size: 18px;
+	}
+	.product_wrapper {
+		margin: 0 10px;
+	}
+}
+
+/*portrait-phone*/
+@media (max-width: 575.98px) {
+	.home_area h1 {
+		font-weight: 600;
+		font-size: 36px;
+	}
+	#prefetch input{
+		height: 25px; 
+		width: 200px; 
+		margin-top:2px; 
+		margin-left: -30px
+	}
+	#prefetch input::placeholder{
+		font-size: 15px;
+	}
+	.product_wrapper {
+		margin: 0;
+	}
+}

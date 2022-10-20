@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior:inherit;
+    font-size: 15px;
+}
+
+.register_container::before {
+    content:"";
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/register.png') no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    animation: anim 20s linear infinite;
+    z-index: -1;
+}
+@keyframes anim {
+    25% {
+        filter:blur(1px);
+        transform: scale(1.1);
+    }
+    50%{
+        filter:blur(3px);
+        transform: scale(1.2);
+    }
+    75%{
+        filter:blur(5px);
+        transform: scale(1.3);
+    }
+    100%{
+        filter: 0;
+        transform: scale(1);
+    }
+}
+.form-register{
+    background: #fff;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 13rem;
+    margin-bottom: 1.3em;
+}
+.form-register .headingtest{
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 35px 0;
+    margin-bottom: 12px;
+    position: relative;
+}
+.form-register .form-group{
+    padding: 0 40px;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+.form-register .form-control{
+    margin: auto;
+    width: 350px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px 0 45px;
+    height: 50px;
+    transition: all 0.3s ease 0s;
+}
+.form-register .form-control:focus{
+    background: #e0e0e0;
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-register .form-group i{
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    font-size: 18px;
+    color: #c8c8c8;
+    transition : all 0.5s ease 0s;
+}
+.form-register .form-control:focus + i{
+    color: #00b4ef;
+}
+.form-register .fa-question-circle{
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+    font-size: 20px;
+    color: #808080;
+    transition: all 0.5s ease 0s;
+}
+.form-register .fa-question-circle:hover{
+    color: #000;
+}
+.form-register .form-checkbox{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #f7a63c;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 65px;
+    border: 1px solid #f7a63c;
+}
+.form-register .form-checkbox:hover{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fac37c;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 65px;
+    border: 1px solid #fac37c;
+}
+.form-register .text{
+    float: left;
+    margin-left: 7px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+.form-register .btn{
+    width: 190px;
+    font-size: 18px;
+    color: #fff;
+    background: #f7a63c;
+    border-radius: 25px;
+    padding: 15px 25px;
+    border: none;
+    margin:1em 1em 0.6em;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+.form-register .btn:hover{
+    background: #fac37c;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 500px){
+    .form-register .form-group{
+        padding: 0 25px;
+    }
+    .form-register .form-group i{
+        left: 45px;
+    }
+    .form-register .btn{
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,172 @@
+.profile_container{
+    background: url('../images/register.png');
+    background-size: cover;
+}
+.form-user{
+    background: #fff;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 16rem;
+}
+.form-user .heading{
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 35px 0;
+    margin-bottom: 30px;
+}
+.form-user .form-group{
+    padding: 0 40px;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+.form-user .form-group1{
+    padding: 0 40px;
+    margin: 10px 10px 12px 10px;
+    position: relative;
+}
+.form-user .form-control{
+    margin: auto;
+    width: 200px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 5px 0 0 10px;
+    height: 30px;
+    transition: all 0.3s ease 0s;
+    margin-top:1.5rem;
+}
+.form-user .form-control:focus{
+    background: #e0e0e0;
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-user .form-group i{
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    font-size: 17px;
+    color: #c8c8c8;
+    transition : all 0.5s ease 0s;
+}
+.form-user .form-control:focus + i{
+    color: #00b4ef;
+}
+.form-user .fa-question-circle{
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+    font-size: 20px;
+    color: #808080;
+    transition: all 0.5s ease 0s;
+}
+.form-user .fa-question-circle:hover{
+    color: #000;
+}
+.form-user .main-checkbox{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #f7a63c;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 65px;
+    border: 1px solid #f7a63c;
+}
+.form-user .main-checkbox label{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.form-user .main-checkbox label:after{
+    content: "";
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.form-user .main-checkbox input[type=checkbox]{
+    visibility: hidden;
+}
+.form-user .main-checkbox input[type=checkbox]:checked + label:after{
+    opacity: 1;
+}
+.form-user .text{
+    float: left;
+    margin-left: 7px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+.form-user .btn{
+    width: 175px;
+    font-size: 15px;
+    color: #fff;
+    background: #f7a63c;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+.form-user .btn:hover{
+    background: #fac37c;
+    text-decoration: underline;
+}
+.form-user .btn1{
+    width: 140px;
+    font-size: 15px;
+    color: #fff;
+    background: #f7a63c;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+    margin-left: 5rem;
+    float: left;
+}
+.form-user .btn-3{
+    border-radius: 60px;
+    width:120px;
+    height:120px;
+    background: #fff;
+    padding: 0 0 10px 0;
+}
+.circleImg{
+    border-radius: 60px;
+    width:120px;
+    height:120px;
+    padding: 0 0 0px 0;
+}
+.btn-2{
+    border-radius: 30px;
+    width:60px;
+    height:60px;
+    padding: 0 0 10px 0;
+}
+
+@media only screen and (max-width: 500px){
+    .form-user .form-group{
+        padding: 0 25px;
+    }
+    .form-user .form-group i{
+        left: 45px;
+    }
+    .form-user .btn{
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+.upload_container{
+    display: flex;
+    position: relative;
+    padding: 10px;
+    height: 850px;
+    width: 60%;
+    background: #fff;
+    border-radius: 10px;
+    border: #c850c0 5px double;
+    margin: 150px auto 200px auto;
+}
+
+input[type=text] {
+    display: block;
+    width: 80%;
+    margin-left: 70px;
+    height: calc(4.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.85rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.row-item {
+    margin-bottom: 2rem;
+}
+.row-item:after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+.upload_button {
+    position: absolute;
+    left:18%;
+    bottom: 80px;
+    font-size: 20px;
+    color: white;
+    width: 50%;
+    background-color: skyblue;
+    padding: 15px 40px 15px 40px;
+    border-radius: 20px;
+
+}
+/*desktop-large*/
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .upload_container{
+        margin-top: 200px;
+    }
+}
+/*desktop*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .upload_container{
+        margin-top: 200px;
+    }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .upload_container{
+        margin-top: 500px;
+    }
+}
+/*landscape-phone*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .upload_container{
+        margin-top: 500px;
+    }
+}
+/*portrait-phone*/
+@media (max-width: 575.98px) {
+    .upload_container{
+        margin-top: 500px;
+    }
+}
