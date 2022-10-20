@@ -1,65 +1,28 @@
 version: '3.3'
-
-
 services:
+  php-apache-environment:
+    container_name: php-apache
+    image: php:7.0-apache
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 8000:80
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+        MYSQL_DATABASE: MY_DATABASE
+        MYSQL_USER: php
+        MYSQL_PASSWORD: php
+    ports:
+        - "3306:3306"
 
-    mysql:
-        image: mysql:5.7
-        volumes:
-         - database:/var/lib/mysql
-        container_name: codeigniter-sql
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: MyDBRoot123
-            MYSQL_DATABASE: codeigniter
-            MYSQL_USER: php
-            MYSQL_PASSWORD: php
-        networks:
-          - mynet
-
-
-    myphp:
-        container_name: codeigniter-php
-        expose:
-          - "9000"
-        working_dir: /var/www/
-        volumes:
-          - ./src:/var/www/
-        depends_on:
-          - mysql
-        build: 
-            context: './src/docker/myphp/'
-            dockerfile: dockerfile 
-        networks:
-          - mynet
-
-    mynginx:
-        image: nginx:latest
-        container_name: codeigniter-nginx
-        ports: 
-          - "8080:80"
-        depends_on:
-          - myphp
-          - mysql
-        volumes:
-          - ./docker/mynginx/nginx.ini:/etc/nginx/conf.d/default.conf
-          - ./:/var/www/
-        networks:
-          - mynet
-        
-    phpMyAdmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: codeigniter-phpmyadmin
-        ports:
-          - "8188:80"
-        environment:
-            PMA_HOST: mysql
-        networks:
-          - mynet
-
-volumes:
-    database: {}
-
-networks:
-    mynet:
-        driver: bridge
+  phpMyAdmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: codeigniter-phpmyadmin
+      ports:
+        - "8188:80"
+      environment:
+          PMA_HOST: db
