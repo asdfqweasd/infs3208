@@ -12,8 +12,10 @@ services:
       - 8000:80
   db:
     container_name: db
-    image: mysql
+    image: mysql:5.7
     restart: always
+    volumes:
+         - database:/var/lib/mysql
     environment:
         MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
         MYSQL_DATABASE: MY_DATABASE
@@ -29,3 +31,6 @@ services:
         - "8188:80"
       environment:
           PMA_HOST: db
+
+volumes:
+    database: {}
