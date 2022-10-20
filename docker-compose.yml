@@ -5,6 +5,9 @@ services:
     image: php:7.0-apache
     volumes:
       - ./src:/var/www/html/
+    build: 
+        context: './src/'
+        dockerfile: dockerfile 
     ports:
       - 8000:80
   db:
