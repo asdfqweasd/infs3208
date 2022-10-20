@@ -49,16 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-// add new route for posts
-$route['checkout'] = 'checkout/index';
-$route['cart'] = 'cart/index';
-$route['products'] = 'products/index';
-$route['posts/create'] ='posts/create';
-$route['posts/update'] ='posts/update';
-$route['posts/(:any)'] = 'posts/view/$1';
-$route['posts'] = 'posts/index';
-$route['default_controller'] = 'pages/view';
-// anything towards view home   $1 represent anything
-$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['product/(:num)'] = 'product/products/$1';
+$route['search/(:num)'] = 'search/searchCat/$1';
+$route['rating/(:num)'] = 'rating/updateRating/$1';

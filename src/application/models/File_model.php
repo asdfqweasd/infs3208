@@ -27,21 +27,4 @@
             return $this->db->get();
         }
     }
-    
-    public function getRows($id = ''){ 
-        $this->db->select('*'); 
-        $this->db->from('files'); 
-        if($id){ 
-            $this->db->where('f_id',$id); 
-            $query = $this->db->get(); 
-            $result = $query->row_array(); 
-        }else{ 
-            $this->db->order_by('filename','desc'); 
-            $query = $this->db->get(); 
-            $result = $query->result_array(); 
-        } 
-         
-        return !empty($result)?$result:false; 
-    } 
-
 }
