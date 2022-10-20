@@ -31,6 +31,8 @@ services:
         - "8188:80"
       environment:
           PMA_HOST: db
+          MYSQL_USERNAME: php
+          MYSQL_ROOT_PASSWORD: php
 
 volumes:
     database: {}
